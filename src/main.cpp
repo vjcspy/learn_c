@@ -6,6 +6,8 @@
 #include "learn_class.h"
 
 int main() {
-    const Person person("John", 21);
-    person.sayHello();
+    int x = 5;
+    int* ptr = &x;
+
+    std::cout << "ptr " << ptr << std::endl;
 }

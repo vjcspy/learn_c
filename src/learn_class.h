@@ -4,12 +4,22 @@
 #include <string>
 
 class Person {
-private:
+protected:
     std::string name;
     int age;
 
 public:
     Person(std::string name, int age);
+
+    void sayHello() const;
+};
+
+class Bob : public Person {
+    std::string nickname;
+
+public:
+    Bob(const std::string &name, int age, const std::string &nickname);
+
     void sayHello() const;
 };
 
