@@ -7,45 +7,66 @@
   },
   "configurePresets": [
     {
-      "name": "default",
+      "name": "windows-debug",
       "hidden": false,
-      "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/build",
+      "generator": "MinGW Makefiles",
+      "binaryDir": "${sourceDir}/build_windows",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug"
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++"
       }
     },
     {
-      "name": "release",
+      "name": "windows-release",
       "hidden": false,
-      "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/build_release",
+      "generator": "MinGW Makefiles",
+      "binaryDir": "${sourceDir}/build_windows_release",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release"
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++"
       }
     },
     {
-      "name": "msvc-debug",
+      "name": "linux-debug",
       "hidden": false,
-      "generator": "Visual Studio 17 2022",
-      "binaryDir": "${sourceDir}/build_msvc",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build_linux",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug"
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++"
+      }
+    },
+    {
+      "name": "linux-release",
+      "hidden": false,
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build_linux_release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++"
       }
     }
   ],
   "buildPresets": [
     {
-      "name": "default",
-      "configurePreset": "default"
+      "name": "windows-debug",
+      "configurePreset": "windows-debug"
     },
     {
-      "name": "release",
-      "configurePreset": "release"
+      "name": "windows-release",
+      "configurePreset": "windows-release"
     },
     {
-      "name": "msvc-debug",
-      "configurePreset": "msvc-debug"
+      "name": "linux-debug",
+      "configurePreset": "linux-debug"
+    },
+    {
+      "name": "linux-release",
+      "configurePreset": "linux-release"
     }
   ],
   "testPresets": []
