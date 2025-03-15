@@ -2,7 +2,7 @@
 // Created by vm on 3/15/25.
 //
 
-#include "learn_class.h"
+#include "class.h"
 
 #include <iostream>
 #include <utility>

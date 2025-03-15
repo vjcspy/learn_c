@@ -3,11 +3,11 @@
 //
 
 #include <iostream>
-#include "learn_class.h"
+#include "class.h"
+#include "lambda.h"
+#include "variadic_function.h"
 
 int main() {
-    int x = 5;
-    int* ptr = &x;
-
-    std::cout << "ptr " << ptr << std::endl;
+    testVariadicFunction(3, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    testlambda();
 }

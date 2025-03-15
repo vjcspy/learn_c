@@ -7,7 +7,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Tạo executable từ mã nguồn
 add_executable(learnc src/main.cpp
-        src/learn_class.cpp)
+        src/class.cpp
+        src/variadic_function.cpp
+        src/variadic_function.h
+        src/lambda.cpp
+        src/lambda.h
+)
 
 # Thêm thư mục include
 target_include_directories(learnc PRIVATE include)
