@@ -6,12 +6,14 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Tạo executable từ mã nguồn
-add_executable(learnc src/main.cpp
+add_executable(
+        learnc
+        src/main.cpp
         src/class.cpp
         src/variadic_function.cpp
-        src/variadic_function.h
         src/lambda.cpp
-        src/lambda.h
+        src/pointer.cpp
+        src/macro/macro_api.cpp
 )
 
 # Thêm thư mục include
