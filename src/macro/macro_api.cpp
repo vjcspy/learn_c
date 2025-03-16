@@ -1,7 +1,7 @@
 ﻿#include "macro_api.h"
 #include <cstdio>
 
-#define DO_API(r, n, p) extern  r (*n) p = nullptr;
+#define DO_API(r, n, p) r (*n) p = nullptr;
 #include "api.h"
 #undef DO_API
 
